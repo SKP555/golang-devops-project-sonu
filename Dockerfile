@@ -4,12 +4,13 @@ WORKDIR /app
 
 COPY app/ .
 
+RUN go clean -cache
 RUN go mod tidy
 
-# 👇 ADD THIS LINE (forces rebuild)
+# force rebuild every time
 ARG CACHE_BUST=1
 
-RUN go build -o main .
+RUN go build -a -o main .
 
 FROM alpine:latest
 
