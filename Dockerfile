@@ -6,12 +6,16 @@ COPY app/ .
 
 RUN go mod tidy
 
-RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o main .
+# 👇 build fully static binary (important flags)
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -installsuffix cgo -o main .
 
-FROM alpine:latest
+# 👇 use scratch instead of alpine (removes compatibility issues)
+FROM scratch
 
-WORKDIR /root/
+WORKDIR /
 
 COPY --from=builder /app/main .
 
-CMD ["./main"]
+EXPOSE 8080
+
+CMD ["/main"]
