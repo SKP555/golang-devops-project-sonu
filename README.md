@@ -58,7 +58,7 @@ GitHub → GitHub Actions → Docker Hub → Argo CD → Kubernetes → Live App
 - Zero manual deployment workflow 
 
 ---
-
+```text
 ## 📁 Project Structure
 
 golang-devops-project-sonu/
@@ -68,7 +68,7 @@ golang-devops-project-sonu/
 ├── images/ # Project screenshots
 ├── Dockerfile
 └── README.md
-
+```
 ---
 
 # 📸 Project Demonstration
@@ -179,7 +179,6 @@ Faced several real-world DevOps issues during implementation:
 ## 👤 Author
 
 **Sonu Krishna**
- 
 DevOps | Cloud | Kubernetes 
 
 - GitHub: https://github.com/SKP555 
