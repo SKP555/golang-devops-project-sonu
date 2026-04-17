@@ -58,8 +58,8 @@ GitHub → GitHub Actions → Docker Hub → Argo CD → Kubernetes → Live App
 - Zero manual deployment workflow 
 
 ---
-
 ## 📁 Project Structure
+
 golang-devops-project-sonu/
 ├── app/ # Golang application
 ├── k8s/ # Kubernetes manifests
