@@ -1,111 +1,122 @@
-# End-to-End DevOps Pipeline (Golang Application)
+# 🚀 End-to-End DevOps Pipeline with GitOps (Golang, Docker, Kubernetes, Argo CD)
 
-This project demonstrates a complete DevOps workflow by building, containerising, and deploying a Golang web application using modern DevOps tools and practices.
+## 📌 Overview
 
----
+This project demonstrates a complete DevOps workflow, from application development to automated deployment using GitOps principles.
 
-##  Project Overview
-
-This project simulates a real-world DevOps pipeline, covering:
-
-- Application development (Golang)
-- Containerisation using Docker (multi-stage build)
-- CI/CD pipeline implementation
-- Kubernetes deployment
-- GitOps-based delivery using Argo CD
-- Helm charts for environment management
-- Ingress and DNS configuration
+A Golang-based web application is containerised using Docker, deployed on Kubernetes, and continuously delivered using Argo CD. Any change pushed to GitHub is automatically reflected in the running Kubernetes cluster.
 
 ---
 
-##  Tech Stack
+## 🧠 Architecture
 
-- Golang
-- Docker
-- Kubernetes
-- GitHub Actions (CI)
-- Argo CD (CD)
-- Helm
-- Linux (WSL)
+GitHub → GitHub Actions → Docker Hub → Argo CD → Kubernetes → Live Application
+
+* GitHub Actions builds and pushes Docker images
+* Docker Hub stores application images
+* Kubernetes manages deployment, scaling, and networking
+* Argo CD monitors GitHub and syncs cluster state
+* Ingress exposes the application externally
 
 ---
 
-## Project Structure
+## ⚙️ Tech Stack
+
+* Golang
+* Docker (multi-stage builds)
+* Kubernetes (Deployment, Service, Ingress)
+* GitHub Actions (CI pipeline)
+* Argo CD (GitOps CD)
+* NGINX Ingress Controller
+
+---
+
+## 🔄 CI/CD Workflow
+
+1. Code is pushed to GitHub
+2. GitHub Actions builds Docker image
+3. Image is pushed to Docker Hub
+4. Argo CD detects repository changes
+5. Kubernetes cluster updates automatically
+
+No manual deployment commands are required.
+
+---
+
+## 🚀 Key Features
+
+* Containerised Golang application
+* Automated CI pipeline with GitHub Actions
+* Kubernetes deployment with replica scaling
+* Service-based communication
+* Ingress-based routing
+* GitOps workflow with automatic sync and self-healing
+* Zero manual deployment using kubectl
+
+---
+
+## 📁 Project Structure
+
+```
 golang-devops-project-sonu/
-|---app/ # Golang application
-|---k8s/ # Kubernetes manifests
-|---helm/ # Helm charts
-|---.github/workflows/# CI/CD pipelines
-|---Dockerfile
-|___README.md
- 
----
-
-##Step 1 — Application Setup
-
-A simple Golang web server was created to simulate a backend service.
-
-## Application Output
-
-When running locally or via Docker:
-
-http://localhost:8080
-
-Output:
-End to End DevOps Pipeline -Golang App by Sonu
-
-### Run locally:
-cd app
-go run main.go
-
-Visit:
-http://localhost:8080
+├── app/                # Golang application
+├── k8s/                # Kubernetes manifests
+├── .github/workflows/  # CI pipeline
+├── Dockerfile
+└── README.md
+```
 
 ---
 
-## Step 2 - Docker (Multi-Stage Build)
-The application is containerised using a multi-stage Docker build to optimise image size and seperate build/runtime environments.
+## 📸 Project Demonstration
 
-docker build -t golang-devops-app.
+### 🔹 Repository Structure
 
-### Why Multi-Stage Build?
- - Reduces final image size
- - Improves security by seperating build and runtime
- - Follows production best practices
+(ss here)
 
+### 🔹 CI Pipeline (GitHub Actions)
 
+(Add ss here)
 
-### Run container:
-docker run -p 8080:8080 golang-devops-app
----
+### 🔹 Docker Image (Docker Hub)
 
-## Upcoming Steps
+(Add screenshot here)
 
-- [ ] Push code to GitHub
-- [ ] Implement CI using GitHub Actions
-- [ ] Push Docker image to Docker Hub
-- [ ] Deploy to Kubernetes (EKS / local cluster)
-- [ ] Setup Argo CD for GitOps deployment
-- [ ] Configure Helm for multi-environment setup
-- [ ] Setup Ingress and DNS mapping
+### 🔹 Kubernetes Deployment (Pods Running)
 
----
+(Add screenshot here)
 
-## Goal
+### 🔹 Application via Ingress
 
-To build a production-like DevOps pipeline and gain hand-on experience with modern cloud, containerisation and deployment practices.
+(Add screenshot here)
+
+### 🔹 Argo CD Dashboard (GitOps Sync)
+
+(Add screenshot here)
 
 ---
 
-## What I Learned
+## 🧠 Key Learnings
 
- - How to build and run a Golang web application
- - Containerising applications using Docker
- - Writing multi-stage Dockerfiles
- - Running applications inside containers
- - Understanding application lifecycle in a Devops workflow 
+* Built an end-to-end DevOps pipeline from scratch
+* Implemented GitOps-based deployment using Argo CD
+* Understood Kubernetes networking and scaling
+* Automated build and deployment workflows
+* Debugged real-world issues across CI/CD and Kubernetes
 
 ---
-## Author
 
-  **Sonu Krishna**
+## 🎯 Future Improvements
+
+* Helm-based deployment
+* Cloud deployment (AWS / GCP)
+* Monitoring and logging (Prometheus, Grafana)
+* Environment-based configurations
+
+---
+
+## 👤 Author
+
+Sonu Krishna
+GitHub: https://github.com/SKP555
+LinkedIn: https://www.linkedin.com/in/sonukrsna
