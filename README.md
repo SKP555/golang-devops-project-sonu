@@ -177,8 +177,9 @@ Faced several real-world DevOps issues during implementation:
 ---
 
 ## 👤 Author
+
+**Sonu Krishna** 
 ```text
-**Sonu Krishna**
 DevOps | Cloud | Kubernetes 
 
 - GitHub: https://github.com/SKP555 
