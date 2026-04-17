@@ -18,8 +18,13 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Build Docker image
-        run: docker build --no-cache -t therealbatman1/golang-devops-app:v3 .
+     - name: Set up Docker Buildx
+  uses: docker/setup-buildx-action@v3
 
-      - name: Push Docker image
-        run: docker push therealbatman1/golang-devops-app:v3
+- name: Build and Push Docker image
+  run: |
+    docker buildx build \
+      --platform linux/amd64 \
+      --no-cache \
+      -t therealbatman1/golang-devops-app:v4 \
+      --push .
