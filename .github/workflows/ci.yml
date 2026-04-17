@@ -19,7 +19,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker image
-        run: docker build --no-cache -t therealbatman1/golang-devops-app:v2 .
+        run: docker build --no-cache -t therealbatman1/golang-devops-app:v3 .
 
       - name: Push Docker image
-        run: docker push therealbatman1/golang-devops-app:v2
+        run: docker push therealbatman1/golang-devops-app:v3
