@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: golang-app
 spec:
+  revisionHistoryLimit: 1
   replicas: 4
   selector:
     matchLabels:
@@ -14,6 +15,6 @@ spec:
     spec:
       containers:
       - name: golang-app
-        image: therealbatman1/golang-devops-app:v4
+        image: therealbatman1/golang-devops-app:v5
         ports:
         - containerPort: 8080
