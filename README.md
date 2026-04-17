@@ -178,10 +178,8 @@ Faced several real-world DevOps issues during implementation:
 
 ## 👤 Author
 
-**Sonu Krishna** 
-```text
-DevOps | Cloud | Kubernetes 
-
+**Sonu Krishna**         
+DevOps | Cloud | Kubernete 
 - GitHub: https://github.com/SKP555 
 - LinkedIn: https://www.linkedin.com/in/sonukrsna 
-```
+
