@@ -4,13 +4,9 @@ WORKDIR /app
 
 COPY app/ .
 
-RUN go clean -cache
 RUN go mod tidy
 
-# force rebuild every time
-ARG CACHE_BUST=1
-
-RUN go build -a -o main .
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o main .
 
 FROM alpine:latest
 
