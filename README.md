@@ -20,10 +20,6 @@ End-to-end GitOps-based CI/CD pipeline with automated deployment and self-healin
 
 ![GitOps Architecture](./images/gitops-architecture.png)
 
-GitHub → GitHub Actions → Docker Hub → Argo CD → Kubernetes → Live Application
-
-
-
 - GitHub Actions builds and pushes Docker images 
 - Docker Hub stores versioned container images 
 - Kubernetes manages deployment, scaling, and networking 
